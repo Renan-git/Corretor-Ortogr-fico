@@ -23,5 +23,9 @@ scanf(" %s",palavra);
 		scanf(" %s",palavra);
 		ini=0;fim=275502;
 	}
+
+for (ini=0;bibliotecaArmazenada[ini]!=NULL;ini++)
+	free(bibliotecaArmazenada[ini]);
+free(bibliotecaArmazenada);
 return 0;
 }

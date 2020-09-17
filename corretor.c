@@ -16,7 +16,6 @@ biblioteca = fopen("/usr/share/dict/brazilian","r");
 	{	
 		Matriz[i]=malloc(sizeof (palavra));
 		strcpy(Matriz[i],palavra);
-//		printf("%s\n",Matriz[i]);
 		i++;
 		fscanf(biblioteca,"%s",palavra);
 	}
@@ -40,10 +39,13 @@ if ((strcmp(matriz[((inicio+final)/2)],palavra))==0)
 if (inicio>final)
 	return 0;
 	else
+	{
 		if (strcmp(matriz[(inicio+final)/2],palavra)<0)
 				ProcuraBinaria(matriz,palavra,inicio=(((inicio+final)/2)+1),final);
 		else
 			if (strcmp(matriz[(inicio+final)/2],palavra)>0)
 				ProcuraBinaria(matriz,palavra,inicio,final=(((inicio+final)/2)-1));
+	}
+return(1);
 }
 
